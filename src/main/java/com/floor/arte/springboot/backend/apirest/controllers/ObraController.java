@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.floor.arte.springboot.backend.apirest.exception.StatusException;
-import com.floor.arte.springboot.backend.apirest.model.Obra;
-import com.floor.arte.springboot.backend.apirest.service.IObraService;
+import com.floor.arte.springboot.backend.apirest.models.Obra;
+import com.floor.arte.springboot.backend.apirest.services.IObraService;
 
 @RestController
 @RequestMapping(path = "/arte")
@@ -56,7 +56,7 @@ public class ObraController {
 
 		try {
 
-			if (temp.getId() != 0) {
+			if (temp.getId() != null) {
 				return ResponseEntity.status(201).body(temp);
 			} else {
 				throw new StatusException("Bad request. Please check the values", 400);
@@ -76,7 +76,7 @@ public class ObraController {
 
 		try {
 
-			if (temp.getId() != 0) {
+			if (temp.getId() != null) {
 				return ResponseEntity.status(201).body(temp);
 			} else {
 				throw new StatusException("Bad request. Please check the values", 400);

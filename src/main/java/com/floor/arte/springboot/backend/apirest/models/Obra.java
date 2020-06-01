@@ -1,6 +1,7 @@
-package com.floor.arte.springboot.backend.apirest.model;
+package com.floor.arte.springboot.backend.apirest.models;
 
 import java.util.List;
+import java.util.UUID;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -17,7 +18,7 @@ public class Obra {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private UUID id;
 
 	@Column
 	private String titulo;
@@ -43,11 +44,11 @@ public class Obra {
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Video> videos;
 
-	public Integer getId() {
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 

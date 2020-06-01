@@ -1,9 +1,9 @@
-package com.floor.arte.springboot.backend.apirest.service;
+package com.floor.arte.springboot.backend.apirest.services;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.floor.arte.springboot.backend.apirest.model.Obra;
+import com.floor.arte.springboot.backend.apirest.models.Obra;
 
 public interface IObraService {
 

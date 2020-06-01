@@ -1,4 +1,6 @@
-package com.floor.arte.springboot.backend.apirest.model;
+package com.floor.arte.springboot.backend.apirest.models;
+
+import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,16 +17,16 @@ public class Imagen {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private UUID id;
 
 	@Column(name = "imagen_uri")
 	private String imagenUri;
 
-	public Integer getId() {
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 

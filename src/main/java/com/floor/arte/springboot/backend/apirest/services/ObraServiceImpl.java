@@ -1,14 +1,14 @@
-package com.floor.arte.springboot.backend.apirest.service.impl;
+package com.floor.arte.springboot.backend.apirest.services;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.floor.arte.springboot.backend.apirest.model.Obra;
-import com.floor.arte.springboot.backend.apirest.repository.ObraRepository;
-import com.floor.arte.springboot.backend.apirest.service.IObraService;
+import com.floor.arte.springboot.backend.apirest.models.Obra;
+import com.floor.arte.springboot.backend.apirest.repositories.ObraRepository;
 
 @Service
 public class ObraServiceImpl implements IObraService {
@@ -75,7 +75,7 @@ public class ObraServiceImpl implements IObraService {
 		} catch (Exception e) {
 			
 			System.out.println("Bad Request");
-			obra.setId(0);
+			obra.setId(new UUID(id, id));
 			
 		}
 		
